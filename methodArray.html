@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Method Array</title>
+</head>
+<body>
+    <script>
+        //Metode ini berfungsi untuk membuat array dari setiap argumen yang dipassing
+        const angka = Array.of(1, 2, 3, 4, 5, 6);
+        console.log(angka); // Output: [1, 2, 3, 4, 5, 6]
+
+        //Metode ini berfungsi untuk menggabungkan 2 array menjadi 1 array.
+        const fruits = ['apel', 'banana', 'mango']
+        const number = [1, 2, 3]
+        const newArray = fruits.concat(number);
+        console.log(newArray); // Output: ["apel", "banana", "mango", 1, 2, 3]
+
+        //Metode ini berfungsi untuk mengurutkan elemen pada array baik secara ascending atau descending.
+        const angka1 = [20, 10, 3, 30, 58, 42, 6, 9]
+        const huruf = ['z', 'a', 'c', 'g', 'p']
+        // ascending order
+        const descOrder = angka1.sort((a, b) => a > b ? 1 : -1);
+        console.log(descOrder); // Output: [3, 6, 9, 10, 20, 30, 42, 58]
+        // descending order
+        const ascOrder = huruf.sort((a, b) => a > b ? -1 : 1);
+        console.log(ascOrder); // Output: ['z', 'p', 'g', 'c', 'a']
+
+        //Metode ini berfungsi untuk mereduce elemen array menjadi single value dengan menjumlah setiap elemen (dari kiri ke kanan).
+        const angka2 = [1, 2, 3, 4, 5];
+        const sum = angka2.reduce((total, value) => total + value, 0); // kita dpt mengganti 0 dengan angka lain untuk mendapatkan hasil penjumlahan yang berbeda
+        console.log(sum); // Output: 15
+
+        //Metode ini berfungsi untuk mengecek apakah setiap elemen dalam array memenuhi kondisi.
+        const angka3 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        // mengecek apakah semua elemen lebih dari 5
+        const greaterFive = angka3.every(item => item > 4);
+        console.log(greaterFive); // Output: false
+        // mengecek apakah semua element kurang dari 10
+        const lessTen = angka3.every(item => item < 10);
+        console.log(lessTen); // Output: true
+    </script>
+</body>
+</html>

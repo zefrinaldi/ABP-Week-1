@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Array Object</title>
+    </head>
+    <body>
+        <script>
+            //Membuat Object
+            var human = {
+                NamaDepan: "Andri", //String
+                NamaBelakang: "Zefrinaldi", //String
+                Umur: 20, // Integer
+                NIM: "1301204255", //String
+                BuahFav: [Anggur, Lemon, Mangga], //Array
+                Hobby : {
+                    No1: "Main",
+                    No2: "Jalan",
+                    No3: "Nonton",
+                }
+            };
+
+            //Function Declaration
+            //Menunjuk sebuah object menjadi function
+            function ObjectHuman(NamaDepan, NamaBelakang, Umur, NIM) {
+                //Mendeklarasikan Variabel Object
+                var orang = {};
+                orang.NamaDepan = NamaDepan;
+                orang.NamaBelakang = NamaBelakang;
+                orang.Umur = Umur;
+                orang.NIM = NIM;
+                return orang;
+            }
+            //Membuat Variabel Baru dan memanggil variabel tersebut
+            var human1 = ObjectHuman("Joko", "Tingkir", 23, "1301180192");
+            console.log(human1);
+
+            //Function Constructor
+            //Cara lebih singkat dari Function Declaration
+            function ObjectHuman1(NamaDepan, NamaBelakang, Umur, NIM) {
+                this.NamaDepan = NamaDepan;
+                this.NamaBelakang = NamaBelakang;
+                this.Umur = Umur;
+                this.NIM = NIM;
+            }
+            
+            //Membuat Variabel Baru dan memanggil variabel tersebut
+            //Harus ada new
+            var human2 = new ObjectHuman1("Tingkir", "Joko", 24, "1301180193");
+
+        </script>
+    </body>
+</html>

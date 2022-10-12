@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>minMax</title>
+    </head>
+    <body>
+        <script>
+            //Membuat Array
+            var angka = [1, 10, 21, 15, 16, 18, 24];
+
+            document.write("<h3>Min Max</h3>");
+
+            let max = angka[0];
+            let min = angka[0];
+
+            //Menggunakan Perulangan untuk mencetak semua isi array
+            for(let i = 0; i < angka.length; i++){
+                if (angka[i] < min){
+                    min = angka[i];
+                }
+
+                if (angka[i] > max){
+                    max = angka[i];
+                }
+            }
+            if (min%2 == 0){
+                document.write("Minimumnya adalah ", min, " (Genap) <br>");
+            }else{
+                document.write("Minimumnya adalah ", min, "(Ganjil) <br>");
+            }
+
+            document.write(" ");
+            if (max%2 == 0){
+                document.write("Maximumnya adalah ", max, " (Genap)");
+            }else{
+                document.write("Maximumnya adalah ", max, " (Ganjil)");
+            }
+        </script>
+    </body>
+</html>
